@@ -288,12 +288,6 @@ fieldset {
   color: #333;
 }
 
-/* .report__cell-amount {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-} */
-
 .report__button_table {
   padding: 5px 10px;
   border-radius: 4px;
