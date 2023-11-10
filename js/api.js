@@ -1,4 +1,4 @@
-const API_URL = 'https://likeable-inexpensive-cotton.glitch.me/api';
+const API_URL = 'https://plump-abrupt-dresser.glitch.me/api';
 
 export const getData = async (url) => {
   try {
@@ -9,6 +9,40 @@ export const getData = async (url) => {
     return await response.json();
   } catch (error) {
     console.error("Ошибка при получении данных:", error);
+    throw error;
+  }
+}
+
+export const postData = async (url, data) => {
+  try {
+    const response = await fetch(`${API_URL}${url}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Ошибка при отправке данных:", error);
+    throw error;
+  }
+}
+
+export const deleteData = async (url, id) => {
+  try {
+    const response = await fetch(`${API_URL}${url}/${id}`, {
+      method: 'DELETE',
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Ошибка при удалении данных:", error);
     throw error;
   }
 }
