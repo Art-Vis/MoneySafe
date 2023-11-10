@@ -283,7 +283,11 @@ fieldset {
 .report__cell {
   padding: 10px 15px;
   color: #333;
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> 51b3fb144231510e77cf9da98852bbc35f3edc54
 
 .report__button_table {
   padding: 5px 10px;
